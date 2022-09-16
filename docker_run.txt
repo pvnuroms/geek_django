@@ -1,0 +1,30 @@
+
+virtualenv -p python3 venv_for_django
+
+cd /home/pupkin/projects/djangoBasics
+. /home/pupkin/projects/djangoBasics/venv_for_django/bin/activate
+pip freeze --all > /home/pupkin/projects/djangoBasics/requirements.txt
+
+sudo nano /etc/nginx/conf.d/default.conf
+
+sudo docker build -t django_gb .
+sudo docker run -d --name django_gb --network=host --restart=always django_gb
+
+sudo docker-compose up -d
+sudo docker-compose down
+docker exec -ti django_gb /bin/bash
+
+docker ps -a
+docker logs django_gb
+
+sudo docker exec -it django_gb bash
+
+docker stop django_gb
+docker rm django_gb
+
+docker images
+docker rmi django_gb
+
+tail -n 10 file.txt
+tail -f /var/log/syslog
+less +F | sudo docker logs django_gb

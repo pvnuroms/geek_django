@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+  oss_api:
+    container_name: django_gb
+    image: django_gb
+    volumes:
+      - .:/python_projects
+    command: bash start.sh
+    network_mode: host
+    restart: always
+    environment:
+      - TZ=Europe/Moscow
+      - PYTHONUNBUFFERED=1
