@@ -14,7 +14,7 @@ sudo docker-compose up -d
 sudo docker-compose down
 docker exec -ti django_gb /bin/bash
 
-docker ps -a
+sudo docker ps -a
 docker logs django_gb
 
 sudo docker exec -it django_gb bash

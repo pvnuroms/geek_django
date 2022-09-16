@@ -1,7 +1,7 @@
 version: '3'
 
 services:
-  oss_api:
+  django_gb:
     container_name: django_gb
     image: django_gb
     volumes:
