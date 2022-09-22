@@ -23,7 +23,7 @@ docker stop django_gb
 docker rm django_gb
 
 docker images
-docker rmi django_gb
+sudo docker rmi django_gb
 
 tail -n 10 file.txt
 tail -f /var/log/syslog
